@@ -1,0 +1,28 @@
+{
+  "fish": [
+      {
+        "id": 100,
+        "name": "Adder"
+      },
+      {
+        "id": 101,
+        "name": "Salmon"
+      },
+      {
+        "id": 102,
+        "name": "Trout"
+      },
+      {
+        "id": 103,
+        "name": "Haddock"
+      },
+      {
+        "id": 104,
+        "name": "Cod"
+      },
+      {
+        "id": 105,
+        "name": "Plaice"
+      }
+    ]
+}

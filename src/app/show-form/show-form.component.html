@@ -1,0 +1,44 @@
+<div class="full-padding">
+
+  <mat-toolbar>
+    <button mat-raised-button color="primary" (click)="showModal()"
+            [disabled]="loading || showForm"
+    >Click to open
+    </button>
+
+  </mat-toolbar>
+
+  <form *ngIf="showForm" [formGroup]="form">
+
+    <p>Enter some stuff:</p>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput data-testid="name-input" placeholder="Type something"
+             formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Fish</mat-label>
+      <input type="text"
+             placeholder="Pick one"
+             date-testid="fish-input"
+             formControlName="fish"
+             matInput
+             [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFish">
+        <mat-option *ngFor="let option of fish" [value]="option">
+          {{option.name}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="saveForm()">Save</button>
+  </form>
+
+
+  <div class="full-padding results" *ngIf="showForm">
+    <p class="name">Name: {{ form.get('name')?.value }}</p>
+    <p class="fish">Fish: {{ form.get('fish')?.value?.name }}</p>
+  </div>
+</div>
+

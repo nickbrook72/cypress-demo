@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import {FormControl} from '@angular/forms';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +6,5 @@ import {FormControl} from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  showForm = false;
-  control = new FormControl();
 
-  showModal() {
-    //  delay a bit to show off Cypress
-    setTimeout(() => {
-      this.showForm = true
-    }, 1000);
-  }
 }

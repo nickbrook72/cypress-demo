@@ -1,16 +1,1 @@
-<div class="full-padding">
-
-  <button mat-raised-button color="primary" (click)="showModal()">Click me</button>
-
-  <form *ngIf="showForm">
-
-    <mat-form-field>
-      <mat-label>Name</mat-label>
-      <input matInput data-testid="text-input" placeholder="Type something"
-          [formControl]="control">
-    </mat-form-field>
-  </form>
-
-  <p class="full-padding">{{ control.value }}</p>
-</div>
-
+<app-show-form></app-show-form>
