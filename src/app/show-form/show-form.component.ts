@@ -26,11 +26,8 @@ export class ShowFormComponent {
   }
 
   showModal() {
-    //  delay a bit to show off Cypress
     this.loading = true;
-    this.service.getFish().pipe(
-      delay(1000)
-    ).subscribe( (fish) => {
+    this.service.getFish().subscribe( (fish) => {
       this.loading = false;
       this.showForm = true;
       this.fish = fish;
@@ -43,7 +40,7 @@ export class ShowFormComponent {
   }
 
   saveForm() {
-
+    // we would POST something here...
   }
 
 }

@@ -1,7 +1,8 @@
 <div class="full-padding">
 
   <mat-toolbar>
-    <button mat-raised-button color="primary" (click)="showModal()"
+    <button mat-raised-button color="primary"
+            (click)="showModal()"
             [disabled]="loading || showForm"
     >Click to open
     </button>
@@ -22,7 +23,7 @@
       <mat-label>Fish</mat-label>
       <input type="text"
              placeholder="Pick one"
-             date-testid="fish-input"
+             data-testid="fish-input"
              formControlName="fish"
              matInput
              [matAutocomplete]="auto">
